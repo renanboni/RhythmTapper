@@ -1,4 +1,4 @@
-package com.boni.rhythmtapper
+package com.boni.rhythmtapper.base
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.InputMultiplexer
