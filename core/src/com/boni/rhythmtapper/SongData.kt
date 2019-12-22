@@ -3,10 +3,10 @@ package com.boni.rhythmtapper
 import com.badlogic.gdx.files.FileHandle
 
 class SongData(
-        private var songName: String,
-        private var songDuration: Float,
-        private val keyTimeList: ArrayList<KeyTimePair>,
-        private var keyTimeIndex: Int
+        var songName: String = "",
+        var songDuration: Float = 0F,
+        private val keyTimeList: ArrayList<KeyTimePair> = arrayListOf(),
+        private var keyTimeIndex: Int = 0
 ) {
 
     fun addKeyTime(k: String, t: Float) {
