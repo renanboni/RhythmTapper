@@ -4,24 +4,24 @@ buildscript {
         mavenCentral()
         maven { url "https://plugins.gradle.org/m2/" }
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-        maven { url "https://plugins.gradle.org/m2/" }
         jcenter()
         google()
+    }
+    dependencies {
+        classpath 'org.openjfx:javafx-plugin:0.0.8'
     }
 }
 
 plugins {
-    id 'java'
-    id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.7'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
 }
 
-sourceCompatibility = 12
-targetCompatibility = 12
+apply plugin: 'org.openjfx.javafxplugin'
 
 javafx {
     version = "12"
-    modules = [ 'javafx.controls', 'javafx.fxml']
+    modules("javafx.controls", "javafx.fxml", "javafx.base")
+    configuration = "compileOnly"
 }
 
 allprojects {
