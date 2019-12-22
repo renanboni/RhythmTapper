@@ -23,7 +23,7 @@ class SongData(
 
     fun getCurrentKeyTime() = keyTimeList[keyTimeIndex]
 
-    fun keyTimeCount() = keyTimeList.count()
+    private fun keyTimeCount() = keyTimeList.count()
 
     fun isFinished() = keyTimeIndex > keyTimeCount()
 
