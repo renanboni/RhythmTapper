@@ -1,12 +1,13 @@
 package com.boni.rhythmtapper.actors
 
+import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.scenes.scene2d.Stage
 import com.badlogic.gdx.scenes.scene2d.ui.Label
 import com.badlogic.gdx.utils.Align
 import com.boni.rhythmtapper.base.BaseActor
 import com.boni.rhythmtapper.base.BaseGame
 
-class TargetBox(letter: String, x: Float, y: Float, stage: Stage) : BaseActor(x, y, stage) {
+class TargetBox(color: Color, letter: String, x: Float, y: Float, stage: Stage) : BaseActor(x, y, stage) {
     init {
         loadTexture("box.png")
         setSize(64f, 64f)
